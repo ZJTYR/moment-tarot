@@ -1,0 +1,59 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local environment
+.env*
+
+# deployment and generated files
+.vercel
+next-env.d.ts
+/dist/
+/.wrangler/
+/outputs/
+/work/
+/.pnpm-store/
+*.tsbuildinfo
+# Rebuilt from locked MediaPipe package and checksum-verified official model
+/public/mediapipe/
+
+# 本地验收输出、回退快照与发布暂存包
+/output/
+/release-package/
+/publish-package/
+/artifacts/
+*.bak
+*.orig
+
+# 本机平台绑定与代理运行上下文
+/.openai/
+/.codex/
+/.agents/
+
+# Vercel 静态产物和临时构建入口
+/dist-vercel/
+/.vercel-build/
