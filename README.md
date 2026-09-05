@@ -4,6 +4,9 @@
 
 这是一个可在浏览器运行的交互作品，也适合 Web coding 初学者学习 Three.js 场景、手势输入和前端状态管理。不需要账号或 AI API Key；牌义、三牌总结与音效均在本地生成，用于娱乐与自我探索。
 
+- [在线体验](https://moment-tarot.vercel.app/)
+- [GitHub 源码](https://github.com/ZJTYR/moment-tarot)
+
 ![桌面端：正圆天文钟、十二宫徽章与前景牌阵](docs/images/desktop.png)
 
 <details>
@@ -44,6 +47,8 @@
 准备 Node.js **24.x** 和 pnpm **11.19.0**。已有 pnpm 可跳过安装步骤；从仓库获取代码后，在项目根目录运行：
 
 ```sh
+git clone https://github.com/ZJTYR/moment-tarot.git
+cd moment-tarot
 npm install --global pnpm@11.19.0
 pnpm install --frozen-lockfile
 pnpm dev --host 127.0.0.1 --port 5187
@@ -93,7 +98,7 @@ pnpm-lock.yaml                可复现依赖锁文件
 
 ## 部署到 Vercel
 
-运行 `pnpm run build:vercel` 生成 `dist-vercel/`，Vercel 选择 **Other** 并使用随仓库提供的配置。构建方式、公开访问与上线检查见[部署说明](docs/DEPLOYMENT.md)。实际仓库与公网地址将在创建和验证后补入；此文档不使用猜测的部署链接。
+生产地址：[https://moment-tarot.vercel.app/](https://moment-tarot.vercel.app/)。源码仓库：[ZJTYR/moment-tarot](https://github.com/ZJTYR/moment-tarot)。运行 `pnpm run build:vercel` 生成 `dist-vercel/`，Vercel 选择 **Other** 并使用随仓库提供的配置。构建方式、公开访问与上线检查见[部署说明](docs/DEPLOYMENT.md)。
 
 ## 已验范围
 

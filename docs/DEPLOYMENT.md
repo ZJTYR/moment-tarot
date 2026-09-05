@@ -2,12 +2,22 @@
 
 这是一个浏览器端交互作品，没有账号服务、数据库、LLM 接口或需要设置的业务密钥。Vercel 托管公开体验，GitHub 仓库可保持私有；它们的可见性相互独立。
 
+- 在线体验：[https://moment-tarot.vercel.app/](https://moment-tarot.vercel.app/)
+- 源码仓库：[https://github.com/ZJTYR/moment-tarot](https://github.com/ZJTYR/moment-tarot)
+
 ## 发布前准备
 
 1. 将干净源码放到自己有权使用的 GitHub 仓库，保留 `pnpm-lock.yaml`、构建脚本、应用源码和实际图片。
 2. 使用 README 指定的 Node.js 与 pnpm 版本，运行 `pnpm install --frozen-lockfile`。
 3. 运行类型检查、相关测试以及正式静态构建，确认 HTML、脚本、图片、WASM 和模型均进入最终输出目录。
 4. 在 Vercel 导入该仓库，仅授予构建所需的仓库访问权限；不要把本地凭据或环境文件提交进仓库。
+
+从当前仓库开始：
+
+```sh
+git clone https://github.com/ZJTYR/moment-tarot.git
+cd moment-tarot
+```
 
 ## 构建与项目设置
 
@@ -42,7 +52,7 @@ Vercel 的构建设置用于指定安装命令、构建命令和输出目录；�
 
 部署成功后，使用 Vercel 返回的实际 HTTPS 地址。先在未登录 Vercel 的浏览器或隐私窗口打开生产地址，确认不会要求团队成员登录。如果存在访问保护，按项目需要检查 Deployment Protection 的生产环境设置；参见[官方访问保护说明](https://vercel.com/docs/deployment-protection)。公开页面不需要同时公开 GitHub 源码。
 
-实际仓库和已验证公网地址将在发布完成后补入 README；构建成功或获得一个预览链接都不等于已经完成公开访问验收。
+当前生产地址已经使用未登录浏览器验证：首页可正常打开，且没有 Vercel 访问登录拦截。后续重新部署仍需重复这项检查；构建成功或获得一个预览链接都不等于已经完成公开访问验收。
 
 ## 上线后核对
 
